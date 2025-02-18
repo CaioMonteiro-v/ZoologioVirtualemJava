@@ -1,25 +1,24 @@
 package animals;
-
 import behaviors.Walking;
-import behaviors.Swimming;
 
-public class Penguin extends Animal implements Walking, Swimming {
+public class Penguin extends Animal implements Walking {
+
     public Penguin() {
         super("Pinguim");
     }
 
     @Override
-    public void displayCharacteristics() {
-        System.out.println("O pinguim tem penas, mas não voa.");
+    public String displayCharacteristics() {
+        return "O pinguim é uma ave que não voa e adora o frio.";
     }
 
     @Override
-    public void walk() {
-        System.out.println("O pinguim está andando.");
+    public String eat() {
+        return "Pinguim está comendo.";
     }
 
     @Override
-    public void swim() {
-        System.out.println("O pinguim está nadando.");
+    public String walk() {
+        return "Pinguim está andando desajeitadamente.";
     }
 }

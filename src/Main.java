@@ -1,8 +1,6 @@
-
 import animals.*;
-import behaviors.*; // Adicione esta linha
+import behaviors.*;
 import java.util.Scanner;
-
 
 public class Main {
     public static void main(String[] args) {
@@ -39,16 +37,31 @@ public class Main {
             }
 
             if (animal != null) {
+                System.out.println(getAnimalInfo(animal.getClass().getSimpleName()));
                 animal.displayCharacteristics();
                 animal.eat();
 
-                if (animal instanceof behaviors.Walking) {
+                if (animal instanceof Walking) {
                     ((Walking) animal).walk();
                 }
-                if (animal instanceof behaviors.Swimming) {
+                if (animal instanceof Swimming) {
                     ((Swimming) animal).swim();
                 }
             }
+        }
+    }
+
+    // Método que retorna informações sobre um animal
+    public static String getAnimalInfo(String animalName) {
+        switch (animalName.toLowerCase()) {
+            case "tiger":
+                return "O tigre é um felino forte e ágil.";
+            case "dolphin":
+                return "O golfinho é inteligente e vive na água.";
+            case "penguin":
+                return "O pinguim é uma ave que não voa e adora o frio.";
+            default:
+                return "Animal não encontrado.";
         }
     }
 }

@@ -7,9 +7,9 @@ public abstract class Animal {
         this.name = name;
     }
 
-    public abstract void displayCharacteristics();
+    public abstract String displayCharacteristics(); 
 
-    public void eat() {
-        System.out.println(name + " está comendo.");
+    public String eat() {
+        return name + " está comendo.";
     }
 }

@@ -8,13 +8,12 @@ public class Dolphin extends Animal implements Swimming {
     }
 
     @Override
-    public void displayCharacteristics() {
-        System.out.println("O golfinho é inteligente e vive na água.");
+    public String displayCharacteristics() {
+        return "O golfinho é um mamífero marinho muito inteligente.";
     }
 
     @Override
-    public void swim() {
-        System.out.println("O golfinho está nadando.");
+    public String swim() {
+        return name + " está nadando rapidamente.";
     }
 }
- 

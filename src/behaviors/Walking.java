@@ -1,5 +1,5 @@
 package behaviors;
 
 public interface Walking {
-    void walk();
+    String walk(); 
 }
